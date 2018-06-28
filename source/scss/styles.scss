@@ -1,0 +1,17 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 80px;
+
+	font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+	text-transform: uppercase;
+}
+
+
+@import "../components/jupiter/jupiter.scss";
+@import "../components/saturn/saturn.scss";

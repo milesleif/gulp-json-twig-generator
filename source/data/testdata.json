@@ -1,0 +1,25 @@
+{
+
+    "meta" : {
+        "site" : {
+            "title" : "gulp & json & twig",
+            "description" : "A boilerplate for starting with merging gulp and json and twig together to generate static webpages"
+        }
+    },
+    "components": [
+        {
+            "key" : "jupiter",
+            "value" : {
+                "title" : "Hi there, I am jupiter component",
+                "body" : "Well **markdown** should work as well."
+            }
+        },
+        {
+            "key" : "saturn",
+            "value" : {
+                "title" : "This is saturn speaking",
+                "image" : "http://placekitten.com/g/400/200"
+            }
+        }
+    ]
+}

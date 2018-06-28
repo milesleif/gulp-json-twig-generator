@@ -1,0 +1,20 @@
+{% extends "../layout/base.twig" %}
+
+{% block content %}
+
+    {% for component in components %}
+
+        {# @WARNING include with a list of partials does not work with twig.js #}
+        {# https://github.com/twigjs/twig.js/issues/468 #}
+
+        {% set path = '../components/' ~ component.key ~ '/' ~ component.key ~ '.twig' %}
+
+        <code>
+            {{path}}
+        </code>
+
+        {% include path ignore missing with { c : component.value } %}
+
+    {% endfor %}
+
+{% endblock %}
