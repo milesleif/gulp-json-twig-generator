@@ -22,10 +22,20 @@ gulp.task('twig', function () {
 
     return gulp.src(['source/pages/*.twig'])
         .pipe(data(function (file) {
+
+            var testdata = JSON.parse(fs.readFileSync(SOURCE_DIR + '/data/testdata.json'))
+
             var data = {}
 
-            data.chapters = JSON.parse(fs.readFileSync(SOURCE_DIR + '/data/testdata.json'))
+            // first object in this array contains settings
+            data.settings = testdata.shift()
+            data.chapters = testdata
+
             data.env = "development"
+
+            // @TODO: do this as well for another language,
+            // so we have one output file for each language
+            data.lang = "de"
 
             return data;
         }))

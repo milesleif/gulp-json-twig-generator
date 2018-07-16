@@ -1,47 +1,61 @@
 [{
-    "meta" : {
-        "site" : {
-            "title" : "my title",
-            "description" : "A boilerplate for starting with merging gulp and json and twig together to generate static webpages"
+    "meta": {
+        "site": {
+            "title": "my title",
+            "description": "A boilerplate for starting with merging gulp and json and twig together to generate static webpages"
         }
-    },
-    "components": [
-        {
-            "key" : "jupiter",
-            "value" : {
-                "title" : "Hi there, I am jupiter component",
-                "body" : "Well **markdown** should work as well."
-            }
-        },
-        {
-            "key" : "saturn",
-            "value" : {
-                "title" : "This is saturn speaking",
-                "image" : "http://placekitten.com/g/400/200"
-            }
-        }
-    ]
+    }
 }, {
-    "meta" : {
-        "site" : {
-            "title" : "another chapter",
-            "description" : "A boilerplate for starting with merging gulp and json and twig together to generate static webpages"
-        }
-    },
-    "components": [
-        {
-            "key" : "saturn",
-            "value" : {
-                "title" : "Hi there, I am jupiter component",
-                "body" : "Well **markdown** should work as well."
+    "components": [{
+            "slug": "jupiter",
+            "value": {
+                "title": {
+                    "de": "Hallo, ich bin die Jupiter-Komponente",
+                    "en": "Hi there, I am jupiter component"
+                },
+                "body": {
+                    "de": "Also **markdown** sollte auch funktionieren.",
+                    "en": "Well **markdown** should work as well."
+                }
             }
         },
         {
-            "key" : "jupiter",
-            "value" : {
-                "title" : "This is saturn speaking",
-                "image" : "http://placekitten.com/g/400/200"
+            "slug": "saturn",
+            "value": {
+                "title": {
+                    "de": "Hier spricht Saturn",
+                    "en": "This is Saturn speaking"
+                },
+                "image": "http://placekitten.com/g/400/200"
             }
         }
     ]
+
+}, {
+
+    "components": [{
+            "slug": "saturn",
+            "value": {
+                "title": {
+                    "de": "Hier spricht Saturn",
+                    "en": "This is Saturn speaking"
+                },
+                "image": "http://placekitten.com/g/400/200"
+            }
+        },
+        {
+            "slug": "jupiter",
+            "value": {
+                "title": {
+                    "de": "Hallo, ich bin die Jupiter-Komponente",
+                    "en": "Hi there, I am jupiter component"
+                },
+                "body": {
+                    "de": "Also **markdown** sollte auch funktionieren.",
+                    "en": "Well **markdown** should work as well."
+                }
+            }
+        }
+    ]
+
 }]
