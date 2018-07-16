@@ -2,18 +2,22 @@
 
 {% block content %}
 
-    {% for component in components %}
+    {% for chapter in chapters %}
 
-        {# @WARNING include with a list of partials does not work with twig.js #}
-        {# https://github.com/twigjs/twig.js/issues/468 #}
+        {% for component in chapter.components %}
 
-        {% set path = '../components/' ~ component.key ~ '/' ~ component.key ~ '.twig' %}
+            {# @WARNING include with a list of partials does not work with twig.js #}
+            {# https://github.com/twigjs/twig.js/issues/468 #}
 
-        <code>
-            {{path}}
-        </code>
+            {% set path = '../components/' ~ component.key ~ '/' ~ component.key ~ '.twig' %}
 
-        {% include path ignore missing with { c : component.value } %}
+            <code>
+                {{path}}
+            </code>
+
+            {% include path ignore missing with { c : component.value } %}
+
+        {% endfor %}
 
     {% endfor %}
 

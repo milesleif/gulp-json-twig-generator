@@ -1,8 +1,7 @@
-{
-
+[{
     "meta" : {
         "site" : {
-            "title" : "gulp & json & twig",
+            "title" : "my title",
             "description" : "A boilerplate for starting with merging gulp and json and twig together to generate static webpages"
         }
     },
@@ -22,4 +21,27 @@
             }
         }
     ]
-}
+}, {
+    "meta" : {
+        "site" : {
+            "title" : "another chapter",
+            "description" : "A boilerplate for starting with merging gulp and json and twig together to generate static webpages"
+        }
+    },
+    "components": [
+        {
+            "key" : "saturn",
+            "value" : {
+                "title" : "Hi there, I am jupiter component",
+                "body" : "Well **markdown** should work as well."
+            }
+        },
+        {
+            "key" : "jupiter",
+            "value" : {
+                "title" : "This is saturn speaking",
+                "image" : "http://placekitten.com/g/400/200"
+            }
+        }
+    ]
+}]

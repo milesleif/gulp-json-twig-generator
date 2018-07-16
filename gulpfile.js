@@ -22,7 +22,9 @@ gulp.task('twig', function () {
 
     return gulp.src(['source/pages/*.twig'])
         .pipe(data(function (file) {
-            var data = JSON.parse(fs.readFileSync(SOURCE_DIR + '/data/testdata.json'))
+            var data = {}
+
+            data.chapters = JSON.parse(fs.readFileSync(SOURCE_DIR + '/data/testdata.json'))
             data.env = "development"
 
             return data;
